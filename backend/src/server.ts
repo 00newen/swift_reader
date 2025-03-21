@@ -1,16 +1,20 @@
 import express from 'express';
+import router from './routes';
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 app.use(express.json());
+app.use('/api', router);
 
-// Basic route
 app.get('/', (req, res) => {
-  res.send('Swift Reader API is still running here');
+  // TODO: Add a basic html page with info, or redirect to frontend project url
+  res.send('Swift Reader API is running here');
 });
 
 // Start server
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
+
+export { app, server };

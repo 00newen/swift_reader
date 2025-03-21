@@ -7,8 +7,9 @@ describe('Session API', () => {
   });
 
   test('should create a session', async () => {
-    const res = await request(app).post('/api/v1/sessions').send();
+    const res = await request(app).get('/api/v1/session').send();
     expect(res.status).toBe(201);
-    expect(res.body).toHaveProperty('sessionCode');
+    expect(res.body).toHaveProperty('code');
+    expect(res.body.code).toHaveLength(8);
   });
 });

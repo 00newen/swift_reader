@@ -12,4 +12,10 @@ describe('Session API', () => {
     expect(res.body).toHaveProperty('code');
     expect(res.body.code).toHaveLength(8);
   });
+
+  test.todo('should fetch a session');
+  test.todo('should add a participant to a session');
+  test.todo('should remove a participant from a session');
+  test.todo('should delete a session');
+  test.todo('should update a participant name and theme setting');
 });

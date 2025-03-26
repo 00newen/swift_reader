@@ -1,5 +1,5 @@
 import request from 'supertest';
-import { app, server } from '../server';
+import { app, server } from '../server.ts';
 
 describe('Session API', () => {
   afterAll((done) => {

@@ -1,0 +1,11 @@
+{
+  "projects": [
+    {
+        "name": "swift-reader-server",
+        "src": "backend",
+        "installCommand": "pnpm install",
+        "buildCommand": "pnpm tsc && pnpm build",
+        "outputDirectory": "dist"
+    }
+  ]
+}

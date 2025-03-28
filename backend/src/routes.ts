@@ -1,5 +1,5 @@
 import express from 'express';
-import { generateSessionCode } from './utils/generateSessionCode.ts';
+import { generateSessionCode } from './utils/generateSessionCode.js';
 
 const v1Router = express.Router();
 

@@ -1,5 +1,6 @@
 import request from 'supertest';
-import { app, server } from '../server.ts';
+import { app, server } from '../server.js';
+import { generateSessionCode } from '../utils/generateSessionCode.js';
 
 describe('Session API', () => {
   afterAll((done) => {

@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 app.use('/api', router);
 
-app.get('/', (req, res) => {
+app.get('/', (req: Request, res: Response) => {
   res.send('Swift reader API running on port ' + PORT);
   console.log(`Swift reader API running on port ${PORT}`);
 });

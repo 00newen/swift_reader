@@ -6,5 +6,4 @@ backend/dist
 backend/coverage
 
 frontend/.env
-frontend/node_modules
 .vercel

@@ -1,3 +1,5 @@
+cursor.rules
+
 backend/.env
 backend/node_modules
 backend/dist
@@ -5,3 +7,4 @@ backend/coverage
 
 frontend/.env
 frontend/node_modules
+.vercel

@@ -1,7 +1,7 @@
 import express from 'express';
 import type { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
-import router from './routes.js';
+import apiRouter from './api/index.js';
 import { pgPool } from './db/index.js';
 
 const app = express();
@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3001;
 
 app.use(cors());
 app.use(express.json());
-app.use('/api', router);
+app.use('/api', apiRouter);
 
 app.get('/', (req: Request, res: Response) => {
   res.send('Swift reader API running on port ' + PORT);

@@ -74,3 +74,10 @@ export const practiceRunResults = createTable('practice_run_results', {
   isCorrect: boolean('is_correct'),
   completedAt: timestamp('completed_at').defaultNow(),
 });
+
+// Rate Limiting Table
+export const rateLimits = createTable('rate_limits', {
+  key: varchar('key', { length: 255 }).primaryKey(),
+  points: integer('points').notNull(),
+  expire: timestamp('expire').notNull(),
+});

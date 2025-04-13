@@ -45,6 +45,7 @@ This project is a gamified reading practice app designed for children to improve
 ## Frontend
 
 Framework: React.js
+libraries: React-query, typescript, tailwind, axios
 UI Components: ShadCN UI
 Animations: CSS & lightweight JS animations
 WebSockets: For real-time communication with the backend

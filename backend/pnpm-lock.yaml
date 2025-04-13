@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@neondatabase/serverless':
+        specifier: ^1.0.0
+        version: 1.0.0
       '@types/express-rate-limit':
         specifier: ^6.0.2
         version: 6.0.2(express@4.21.2)
@@ -19,7 +22,7 @@ importers:
         version: 16.4.7
       drizzle-orm:
         specifier: ^0.41.0
-        version: 0.41.0(@types/pg@8.11.11)(@vercel/postgres@0.10.0)(gel@2.0.1)(pg@8.14.1)
+        version: 0.41.0(@neondatabase/serverless@1.0.0)(@types/pg@8.11.11)(@vercel/postgres@0.10.0)(gel@2.0.1)(pg@8.14.1)
       express:
         specifier: ^4.21.2
         version: 4.21.2
@@ -845,6 +848,10 @@ packages:
 
   '@neondatabase/serverless@0.9.5':
     resolution: {integrity: sha512-siFas6gItqv6wD/pZnvdu34wEqgG3nSE6zWZdq5j2DEsa+VvX8i/5HXJOo06qrw5axPXn+lGCxeR+NLaSPIXug==}
+
+  '@neondatabase/serverless@1.0.0':
+    resolution: {integrity: sha512-XWmEeWpBXIoksZSDN74kftfTnXFEGZ3iX8jbANWBc+ag6dsiQuvuR4LgB0WdCOKMb5AQgjqgufc0TgAsZubUYw==}
+    engines: {node: '>=19.0.0'}
 
   '@petamoriken/float16@3.9.2':
     resolution: {integrity: sha512-VgffxawQde93xKxT3qap3OH+meZf7VaSB5Sqd4Rqc+FP5alWbpOyan/7tRbOAvynjpG3GpdtAuGU/NdhQpmrog==}
@@ -3398,6 +3405,11 @@ snapshots:
       '@types/pg': 8.11.6
     optional: true
 
+  '@neondatabase/serverless@1.0.0':
+    dependencies:
+      '@types/node': 22.13.14
+      '@types/pg': 8.11.11
+
   '@petamoriken/float16@3.9.2': {}
 
   '@sinclair/typebox@0.27.8': {}
@@ -3891,8 +3903,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  drizzle-orm@0.41.0(@types/pg@8.11.11)(@vercel/postgres@0.10.0)(gel@2.0.1)(pg@8.14.1):
+  drizzle-orm@0.41.0(@neondatabase/serverless@1.0.0)(@types/pg@8.11.11)(@vercel/postgres@0.10.0)(gel@2.0.1)(pg@8.14.1):
     optionalDependencies:
+      '@neondatabase/serverless': 1.0.0
       '@types/pg': 8.11.11
       '@vercel/postgres': 0.10.0
       gel: 2.0.1

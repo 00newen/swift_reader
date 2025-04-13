@@ -18,6 +18,7 @@ export const participants = createTable('participants', {
   id: uuid('id').primaryKey().defaultRandom(),
   sessionId: uuid('session_id').references(() => sessions.id, { onDelete: 'cascade' }),
   name: varchar('name', { length: 255 }),
+  theme: varchar('theme', { length: 255 }),
   createdAt: timestamp('created_at').defaultNow(),
 });
 

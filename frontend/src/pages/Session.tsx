@@ -47,6 +47,17 @@ export default function Session() {
       <div className='max-w-2xl mx-auto'>
         <h1 className='text-3xl font-bold mb-6'>Reading Session: {session.code}</h1>
 
+        <div>
+          Participants:
+          <div>
+            {session.participants.map((participant) => (
+              <div>
+                Name: {participant.name} | Theme: {participant.theme}
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div className='text-center'>
           <Button onClick={() => navigate('/')} variant='outline'>
             Back to Home

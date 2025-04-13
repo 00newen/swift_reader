@@ -12,6 +12,12 @@ export interface SessionData {
   id: string;
   code: string;
   message: string;
+  participants: Participant[];
+}
+
+export interface Participant {
+  name: string;
+  theme: string;
 }
 
 export const api = {
@@ -26,6 +32,16 @@ export const api = {
   },
 
   getSession: async (sessionCode: string): Promise<SessionData> => {
+    try {
+      const response = await axios.get(`${API_BASE_URL}/v1/sessions/${sessionCode}`);
+      return response.data;
+    } catch (error) {
+      console.error('Error fetching session:', error);
+      throw error;
+    }
+  },
+
+  addParticipant: async (sessionCode: string): Promise<SessionData> => {
     try {
       const response = await axios.get(`${API_BASE_URL}/v1/sessions/${sessionCode}`);
       return response.data;
